@@ -1,0 +1,120 @@
+$mainblue : #3FA9F5;
+$subblue : #35CCE5;
+
+body {
+	background-color: $mainblue;
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+}
+
+.navbar-default {
+	background-color: #FFF;
+	border-color: transparent;
+
+	.navbar-toggle {
+		border-color: $mainblue;
+
+		.icon-bar {
+			background-color: $mainblue;
+		}
+	}
+
+	.navbar-toggle:hover {
+		background-color: transparent;
+	}
+
+	ul {
+		margin: 0;
+	}
+
+	.navbar-collapse {
+			padding: 0;
+		}
+
+	.navbar-nav>.active>a  {
+		background-color: $mainblue; 
+		color: #FFF;
+	}
+
+	.navbar-nav>.active>a:hover {
+		background-color: $mainblue; 
+		color: #FFF;
+	}
+
+	.navbar-nav>.active>a:focus {
+		background-color: $mainblue; 
+		color: #FFF;
+	}
+}
+
+h4 {
+	font-size: 14px;
+	border-left: 2px solid $mainblue;
+    padding-left: 5px;
+}
+
+#accueil {
+	background-image: url('../img/bg.jpeg');
+	background-size: cover; 
+}
+
+.wrapper-header {
+	height: 100vh;
+}
+
+a.btn {
+	width: 100%;
+	padding: 10px 20px;
+	text-align: center;
+	color: #FFF;
+	text-transform: uppercase;
+    font-weight: 700;
+	margin: 10px 0;
+}
+
+a.btn-ask {
+	background-color: $mainblue;
+}
+
+a.btn-help {
+	background-color: $subblue;
+}  
+
+.access {
+	margin-top: 50vh;
+}
+
+header > h1 {
+	color: #FFF;
+	text-align: center;
+	font-size: 24px;
+}
+
+.wrapper-contenu {
+	border: 1px solid #FFF;
+	background: #FFF;
+	margin-bottom: 30px;
+
+	img {
+		margin-top: 13px;
+	}
+
+	p.city {
+		color: $mainblue;
+	}
+
+	i {
+		margin-right: 5px;
+	}
+
+	a {
+		color: $mainblue;
+		text-align: right;
+	}
+
+	.print {
+		text-align: right;
+	}
+}
