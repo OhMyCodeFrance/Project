@@ -17,6 +17,48 @@ $(document).ready(function(){
             });
     }
     
+    else if(pathname == '/nuitdelinfo/#home'){
+        var request = $.ajax({
+                url : 'assets/views/home.php',
+                method : 'GET',
+                data : '',
+                dataType : 'html'
+            });
+
+            request.done(function( msg ) {
+                $('.content').html('');
+                $('.content').html(msg);
+            });
+    }
+    
+    else if(pathname == '/nuitdelinfo/#add_post'){
+        var request = $.ajax({
+                url : 'assets/views/add_post.php',
+                method : 'GET',
+                data : '',
+                dataType : 'html'
+            });
+
+            request.done(function( msg ) {
+                $('.content').html('');
+                $('.content').html(msg);
+            });
+    }
+    
+    else if(pathname == '/nuitdelinfo/#display_posts'){
+        var request = $.ajax({
+                url : 'assets/views/display_posts.php',
+                method : 'GET',
+                data : '',
+                dataType : 'html'
+            });
+
+            request.done(function( msg ) {
+                $('.content').html('');
+                $('.content').html(msg);
+            });
+    }
+    
     $('.content').on('click', '#home', function(){
         console.log('add post');
         
@@ -31,6 +73,8 @@ $(document).ready(function(){
                 $('.content').html('');
                 $('.content').html(msg);
             });
+        
+            window.location.hash = '#home';
     });    
     
     $('.content').on('click', '#add_post', function(){
@@ -43,9 +87,11 @@ $(document).ready(function(){
                 dataType : 'html'
             });
 
-            request.done(function( msg ) {
+            request.done(function( msg ){
                 $('.content').html('');
                 $('.content').html(msg);
+                
+                window.location.hash = '#add_post';
             });
     });    
     
@@ -62,6 +108,8 @@ $(document).ready(function(){
             request.done(function( msg ) {
                 $('.content').html('');
                 $('.content').html(msg);
+                
+                window.location.hash = '#display_posts';
             });
     });
 });
