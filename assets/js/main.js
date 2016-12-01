@@ -1,25 +1,67 @@
 $(document).ready(function(){
     var pathname = window.location.pathname;
     console.log(pathname);
-    if(link_id == 'back-home'){
+    
+    
+    if(pathname == '/nuitdelinfo/'){
             var request = $.ajax({
-                url : 'home.php',
+                url : 'assets/views/home.php',
                 method : 'GET',
                 data : '',
                 dataType : 'html'
             });
 
             request.done(function( msg ) {
-                $('.mdl-layout__content').html('');
-                $('.mdl-layout__content').html(msg);
-
-                $('.menu-tab').removeClass('is-active');
-                $(".menu-tab[href='#scroll-tab-3']").addClass('is-active');
-                initPageHome();
+                $('.content').html('');
+                $('.content').html(msg);
+            });
+    }
+    
+    $('.content').on('click', '#home', function(){
+        console.log('add post');
+        
+        var request = $.ajax({
+                url : 'assets/views/home.php',
+                method : 'GET',
+                data : '',
+                dataType : 'html'
             });
 
-            request.fail(function( jqXHR, textStatus ) {
-
+            request.done(function( msg ) {
+                $('.content').html('');
+                $('.content').html(msg);
             });
-        }
-})
+    });    
+    
+    $('.content').on('click', '#add_post', function(){
+        console.log('add post');
+        
+        var request = $.ajax({
+                url : 'assets/views/add_post.php',
+                method : 'GET',
+                data : '',
+                dataType : 'html'
+            });
+
+            request.done(function( msg ) {
+                $('.content').html('');
+                $('.content').html(msg);
+            });
+    });    
+    
+    $('.content').on('click', '#display_posts', function(){
+        console.log('add post');
+        
+        var request = $.ajax({
+                url : 'assets/views/display_posts.php',
+                method : 'GET',
+                data : '',
+                dataType : 'html'
+            });
+
+            request.done(function( msg ) {
+                $('.content').html('');
+                $('.content').html(msg);
+            });
+    });
+});
