@@ -1,11 +1,15 @@
-<p>Home.php</p>
-
-<button id="add_post">
-    Ajouter un post
-</button>
-   
-<button id="display_posts">
-    Afficher les posts
-</button>
-
-<img src="https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl=http%3A%2F%2Fwww.google.com%2F&choe=UTF-8" title="Link to Google.com" />
+<section id="accueil">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 wrapper-header">
+          <header>
+            <h1>BIENVENUE CHEZ VOUS</h1>
+            <div class="access">
+            <a href="#" id="display_posts" class="btn btn-ask" data-transition="slide" data-direction="reverse">Demander de l'aide</a>
+            <a href="#" id="add_post" class="btn btn-help">Proposer de l'aide</a>
+            </div>
+          </header>
+        </div>
+      </div>
+    </div>
+</section>

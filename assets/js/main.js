@@ -59,7 +59,8 @@ $(document).ready(function(){
             });
     }
     
-    $('.content').on('click', '#home', function(){
+    $('.content').on('click', '#home', function(e){
+        e.preventDefault();
         console.log('add post');
         
         var request = $.ajax({
@@ -77,8 +78,8 @@ $(document).ready(function(){
             window.location.hash = '#home';
     });    
     
-    $('.content').on('click', '#add_post', function(){
-        console.log('add post');
+    $('.content').on('click', '#add_post', function(e){
+        e.preventDefault();
         
         var request = $.ajax({
                 url : 'assets/views/add_post.php',
@@ -95,8 +96,8 @@ $(document).ready(function(){
             });
     });    
     
-    $('.content').on('click', '#display_posts', function(){
-        console.log('add post');
+    $('.content').on('click', '#display_posts', function(e){
+        e.preventDefault();
         
         var request = $.ajax({
                 url : 'assets/views/display_posts.php',
