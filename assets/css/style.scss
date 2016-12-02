@@ -9,9 +9,15 @@ body {
 	overflow-x: hidden;
 }
 
+/* STYLE NAVIGATION */ 
 .navbar-default {
 	background-color: #FFF;
 	border-color: transparent;
+
+	.navbar-brand > img {
+		width: 33%;
+		margin-left: 20px;
+	}
 
 	.navbar-toggle {
 		border-color: $mainblue;
@@ -30,8 +36,8 @@ body {
 	}
 
 	.navbar-collapse {
-			padding: 0;
-		}
+		padding: 0;
+	}
 
 	.navbar-nav>.active>a  {
 		background-color: $mainblue; 
@@ -52,12 +58,28 @@ body {
 h4 {
 	font-size: 14px;
 	border-left: 2px solid $mainblue;
-    padding-left: 5px;
+	padding-left: 5px;
 }
 
 #accueil {
 	background-image: url('../img/bg.jpeg');
 	background-size: cover; 
+}
+
+#help {
+	background-image: url('../img/bgform.jpeg');
+	background-size: cover; 
+	height: 100vh;
+
+	form {
+		background-color: #FFF;
+		padding: 20px;
+
+		label {
+			margin-bottom: 0;
+			margin-top: 5px;
+		}
+	}
 }
 
 .wrapper-header {
@@ -70,7 +92,7 @@ a.btn {
 	text-align: center;
 	color: #FFF;
 	text-transform: uppercase;
-    font-weight: 700;
+	font-weight: 700;
 	margin: 10px 0;
 }
 
@@ -80,10 +102,26 @@ a.btn-ask {
 
 a.btn-help {
 	background-color: $subblue;
-}  
+} 
+
+button.btn {
+	width: 100%;
+	background-color: $mainblue;
+	color: #FFF;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+} 
 
 .access {
-	margin-top: 50vh;
+	margin-top: 35vh;
+}
+
+header {
+	img {
+		width: 30%;
+		margin: auto;
+		margin-top: 50px;
+	}
 }
 
 header > h1 {
